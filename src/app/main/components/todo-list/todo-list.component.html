@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let todo of todos">
+    <span>{{ todo.title }} - </span>
+    <span>{{ todo.dueDate | date : "YYYY/MM/dd" }}</span>
+  </li>
+</ul>
