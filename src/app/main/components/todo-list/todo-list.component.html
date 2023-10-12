@@ -1,6 +1,10 @@
+<h2>To Do´s</h2>
 <ul>
   <li *ngFor="let todo of todos">
     <span>{{ todo.title }} - </span>
     <span>{{ todo.dueDate | date : "YYYY/MM/dd" }}</span>
+    <button (click)="emitTodoId(todo)">
+      <i class="fa-solid fa-trash-can"></i>
+    </button>
   </li>
 </ul>

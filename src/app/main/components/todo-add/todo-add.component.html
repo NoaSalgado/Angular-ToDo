@@ -1,3 +1,4 @@
+<h2>Add New Todo</h2>
 <form (ngSubmit)="emitNewTodo()">
   <fieldset>
     <label for="title">ToDo:</label>
@@ -5,7 +6,12 @@
   </fieldset>
   <fieldset>
     <label for="dueDate">Due Date:</label>
-    <input type="date" name="dueDate" id="dueDate" />
+    <input
+      type="date"
+      name="dueDate"
+      id="dueDate"
+      [(ngModel)]="newTodo.dueDate"
+    />
   </fieldset>
   <button type="submit">Add</button>
 </form>

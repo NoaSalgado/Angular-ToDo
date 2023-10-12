@@ -1,2 +1,6 @@
-<h1>My Angular To Do List</h1>
-<app-todo-list [todos]="todos"></app-todo-list>
+<h1>Angular ToDo App</h1>
+<app-todo-list
+  [todos]="todos"
+  (onDeleteTodo)="deleteTodo($event)"
+></app-todo-list>
+<app-todo-add (onNewTodo)="addNewTodo($event)"></app-todo-add>

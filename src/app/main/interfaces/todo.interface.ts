@@ -1,5 +1,5 @@
 export interface ITodo {
-  id: string;
+  id?: string | undefined;
   title: string;
-  dueDate: Date;
+  dueDate: Date | null;
 }

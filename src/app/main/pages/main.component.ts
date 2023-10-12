@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ITodo } from '../interfaces/todo.interface';
+import { MainService } from '../services/main.service';
 
 @Component({
   selector: 'app-main',
@@ -7,16 +8,17 @@ import { ITodo } from '../interfaces/todo.interface';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent {
-  public todos: ITodo[] = [
-    {
-      id: crypto.randomUUID(),
-      title: 'Learn Angular Basics',
-      dueDate: new Date(2023, 10, 12),
-    },
-    {
-      id: crypto.randomUUID(),
-      title: 'Create my first Angular App',
-      dueDate: new Date(2023, 10, 12),
-    },
-  ];
+  constructor(private MainService: MainService) {}
+
+  get todos(): ITodo[] {
+    return [...this.MainService.todos];
+  }
+
+  public addNewTodo(newTodo: ITodo): void {
+    this.MainService.addNewTodo(newTodo);
+  }
+
+  public deleteTodo(id: string): void {
+    this.MainService.deleteTodo(id);
+  }
 }
