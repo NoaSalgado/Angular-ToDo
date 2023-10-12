@@ -1,17 +1,24 @@
-<h2>Add New Todo</h2>
-<form (ngSubmit)="emitNewTodo()">
-  <fieldset>
-    <label for="title">ToDo:</label>
-    <input type="text" name="title" id="title" [(ngModel)]="newTodo.title" />
-  </fieldset>
-  <fieldset>
-    <label for="dueDate">Due Date:</label>
+<h2 class="secondary-heading">Add New Todo</h2>
+<form class="form" (ngSubmit)="emitNewTodo()">
+  <fieldset class="form__control-group">
+    <label class="form__label" for="title">ToDo:</label>
     <input
+      class="form__input"
+      type="text"
+      name="title"
+      id="title"
+      [(ngModel)]="newTodo.title"
+    />
+  </fieldset>
+  <fieldset class="form__control-group">
+    <label class="form__label" for="dueDate">Due Date:</label>
+    <input
+      class="form__input"
       type="date"
       name="dueDate"
       id="dueDate"
       [(ngModel)]="newTodo.dueDate"
     />
   </fieldset>
-  <button type="submit">Add</button>
+  <button class="btn--submit" type="submit">Add</button>
 </form>

@@ -1,0 +1,22 @@
+.list {
+  border: 2px solid #272727;
+  border-radius: 0.5rem;
+  list-style: none;
+  margin-bottom: 3rem;
+}
+
+.list-item {
+  color: #3f3f3f;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #272727;
+}
+
+.btn--delete {
+  color: #ff7c5f;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  margin-inline-start: 1.4rem;
+}
